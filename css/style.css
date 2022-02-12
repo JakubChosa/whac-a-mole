@@ -1,0 +1,134 @@
+*{
+  box-sizing: border-box;
+}
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+
+body{
+  margin:0;
+  padding: 4em;
+  background-color: #eec0c6;
+  background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 100%);
+  height: 100vh;
+  font-size: 1.125rem;
+  font-family: 'Roboto Slab', sans-serif;
+}
+/* typography */
+h2{
+  font-size: 2em;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+p{
+  font-size: 1.2em;
+}
+button {
+  font-size: 1em;
+}
+.game{
+  background: #f7f7f7;
+  /* width: 92%; */
+  min-width: 600px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+}
+
+/* boxes  */
+
+.container {
+  background: #ffffff;
+  margin: 1em auto;
+  display: grid;
+  grid-template-rows: repeat(var(--grid-rows), 100px);
+  grid-template-columns: repeat(var(--grid-cols), 100px);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+.grid-cell {
+  border: 1px solid #525252;
+}
+.target{
+  display: inline-block;
+}
+.target::after{
+  content: '🎯';
+  font-size: 3em;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* game info */
+
+.info{
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+}
+.info-score, .info-time {
+  font-weight: bold;
+}
+.startBtn {
+    color: #252525;
+    background: linear-gradient(315deg, rgba(189,189,189,1) 0%, rgba(212,211,211,0.15) 48%, rgba(235,235,235,1) 100%);
+    border-radius: 3px;
+    border: 2px solid black;
+    padding: .75em 1.5em;
+    align-self: center;
+    font-weight: bold;
+}
+.startBtn:hover {
+  background: linear-gradient(315deg, #7ee8fa 0%, #eec0c6 100%);
+  cursor: pointer;
+}
+/* Game Mode */
+.form {
+  margin: 0.5em auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.target:hover,input[type="radio"]:hover{
+  cursor: pointer;
+}
+input[type="radio"]{
+   appearance: none;
+   margin: 0 0.7em;
+   padding: 1em;
+   background: rgb(189,189,189);
+   background: linear-gradient(315deg, rgba(189,189,189,1) 0%, rgba(212,211,211,0.15) 48%, rgba(235,235,235,1) 100%);
+   border-radius: 50%;
+}
+input[type="radio"]:checked{
+  background: linear-gradient(315deg, #7ee8fa 0%, #eec0c6 100%);
+}
+
+@media (max-width: 630px){
+  .game{
+    display:none;
+  }
+  h2{
+    font-size: 0px;
+  }
+  h2::after{
+    content: 'Please play on bigger screen ;D';
+    top: 200px;
+    font-size: 32px;
+  }
+}
+@media (max-width: 800px){
+  body{
+    padding: 1em;
+  }
+}
