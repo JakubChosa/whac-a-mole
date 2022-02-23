@@ -5,22 +5,37 @@
   --grid-cols: 1;
   --grid-rows: 1;
 }
-
+html{
+  margin:0;
+  padding:0;
+}
 body{
   margin:0;
-  padding: 4em;
+  padding: 0 4em;
+  background-color: #eec0c6;
+  background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 100%);
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 1.125rem;
+  font-family: 'Roboto Slab', sans-serif;
+}
+.wrapper{
   background-color: #eec0c6;
   background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 100%);
   height: 100vh;
-  font-size: 1.125rem;
-  font-family: 'Roboto Slab', sans-serif;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /* typography */
 h2{
   font-size: 2em;
   text-align: center;
-  margin: 0 auto;
-  margin-bottom: 2em;
+  /* margin: 2em auto; */
+  margin: 0;
+  padding: 1.5em;
 }
 p{
   font-size: 1.2em;
@@ -33,7 +48,7 @@ button {
   /* width: 92%; */
   min-width: 600px;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto 1em;
   padding: 1em;
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
